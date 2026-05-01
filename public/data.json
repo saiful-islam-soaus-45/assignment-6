@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Suite",
+    "description": "Essential tools for individuals and hobbyists starting their journey.",
+    "price": "$100.00",
+    "period": "monthly",
+    "tag": "free",
+    "tagType": "new",
+    "features": [
+      "5 core templates",
+      "Basic data exports",
+      "Community support access",
+      "1GB cloud storage"
+    ],
+    "img": "https://i.ibb.co.com/xqHvYR03/operation.png"
+  },
+  {
+    "id": 2,
+    "name": "Professional Plus",
+    "description": "Advanced features designed for freelancers and small business owners.",
+    "price": "$29.00",
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Unlimited templates",
+      "Priority email support",
+      "Custom branding options",
+      "Advanced analytics dashboard"
+    ],
+    "img": "https://i.ibb.co.com/3YPtsHP5/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Enterprise Edge",
+    "description": "Comprehensive solutions for large-scale teams and organizations.",
+    "price": "$999.00",
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Dedicated account manager",
+      "SAML & SSO integration",
+      "Unlimited collaborators",
+      "White-label reporting"
+    ],
+    "img": "https://i.ibb.co.com/XxkRSBJN/portfolio.png"
+  },
+  {
+    "id": 4,
+    "name": "Creative Pack",
+    "description": "High-fidelity design assets and motion graphics templates.",
+    "price": "$150.00",
+    "period": "one-time",
+    "tag": "exclusive",
+    "tagType": "new",
+    "features": [
+      "50+ 4K motion backgrounds",
+      "Commercial usage license",
+      "Vector source files",
+      "Lifetime updates"
+    ],
+    "img": "https://i.ibb.co.com/N6HM4Xvm/shopping-cart.png"
+  },
+  {
+    "id": 5,
+    "name": "Growth Hub",
+    "description": "Automated marketing tools to scale your digital presence.",
+    "price": "$49.00",
+    "period": "monthly",
+    "tag": "trending",
+    "tagType": "popular",
+    "features": [
+      "AI content generator",
+      "SEO audit toolkit",
+      "Social media scheduler",
+      "API access (10k requests/mo)"
+    ],
+    "img": "https://i.ibb.co.com/GvSnSG03/social-media.png"
+  },
+  {
+    "id": 6,
+    "name": "Data Master Pro",
+    "description": "Powerful data processing and visualization for researchers.",
+    "price": "$500.00",
+    "period": "yearly",
+    "tag": "top rated",
+    "tagType": "best seller",
+    "features": [
+      "Real-time data streaming",
+      "Python/R integration",
+      "Encrypted cloud backups",
+      "Multi-format export (JSON, CSV, PDF)"
+    ],
+    "img": "https://i.ibb.co.com/Pz3wtbYW/writing-2327400-1.png"
+  }
+]

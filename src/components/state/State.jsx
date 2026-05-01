@@ -1,6 +1,6 @@
 const State = () => {
     return (
-        <section className="w-full  bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600  py-20 px-6 mb-10 mt-20">
+        <section className="w-full md:w-full lg:w-full  bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600  py-20 px-6 mb-10 mt-20">
             <div className="max-w-5xl h-10 mx-auto flex items-center justify-between text-white text-center gap-12">
                  
                 

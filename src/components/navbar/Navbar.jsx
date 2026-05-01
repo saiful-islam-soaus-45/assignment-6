@@ -11,7 +11,7 @@ const Navbar = () => {
                     <h2 className="text-3xl font-bold bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600  bg-clip-text text-transparent pb-1">
                         DigiTools
                     </h2>
-                    <ul className="flex gap-5 items-center cursor-pointer">
+                    <ul className="grid grid-cols-1 md:flex lg:flex gap-5 items-center cursor-pointer">
                         <li>Products</li>
                         <li>Features</li>
                         <li>Pricing</li>
