@@ -9,7 +9,7 @@ const Products = ({productsPromise}) => {
     // console.log(products);
     return (
         <div className="container mx-auto">
-           
+           <p>djnd</p>
 
             <AvailableProducts products = {products}></AvailableProducts>
         </div>
