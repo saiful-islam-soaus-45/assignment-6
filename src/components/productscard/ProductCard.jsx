@@ -1,15 +1,18 @@
-// import React from 'react';
+import { useState } from "react";
 
-const AvailableProducts = ({ products }) => {
-
+const ProductCard = ({product, carts, setCarts}) => {
+    const [isSubscribed, setIsSubscribed] = useState(false);
+    const handleSubsCription =() => {
+        console.log("hello");
+            setIsSubscribed(true)
+            
+            setCarts([...carts, product])
+            
+    }
     return (
-        <div>
-            <div className="grid grid-cols-1 ml-15 md:grid-cols-3 md:ml-28 gap-y-10">
-                {
-                    products.map((product) => {
-                        return <div className="card w-96 bg-base-100 border border-gray-300 rounded-2xl shadow-md 
-                transition-all duration-300 
-                hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01]">
+        <div className="card w-96 bg-base-100 border border-gray-300 rounded-2xl shadow-md 
+                            transition-all duration-300 
+                            hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01]">
                             <div className="card-body">
                                 <div className="mb-3">
                                     <img src={product.img} alt="" />
@@ -50,17 +53,16 @@ const AvailableProducts = ({ products }) => {
                                     }
                                 </ul>
                                 <div className="mt-6">
-                                    <button className="btn btn-primary btn-block rounded-2xl">Buy Now</button>
+
+                                    <div className="mt-6">
+                                        <button onClick={handleSubsCription} className="btn btn-primary btn-block">{isSubscribed ? "Added to Cart" : "Buy Now"}</button>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
-                    })
-                }
-            </div>
-
-
-        </div>
     );
 };
 
-export default AvailableProducts;
+export default ProductCard;

@@ -5,9 +5,9 @@ import banner from "../../assets/banner.png";
 const Banner = () => {
   return (
     <div className="mt-20">
-      <div className="container mx-auto flex justify-around ">
+      <div className="container mx-auto justify-around grid grid-cols-1 gap-5 md:flex lg:flex">
 
-        <div className=" mt-10">
+        <div className=" mt-10 ml-11">
           <span className="bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm">
             🔵 New: AI-Powered Tools Available
           </span>
