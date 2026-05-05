@@ -3,7 +3,7 @@ const Description = () => {
         <div>
             <div className="flex flex-col items-center text-center mt-20 mb-10 px-4">
     
-    <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+    <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
         Premium Digital Tools
     </h1>
 

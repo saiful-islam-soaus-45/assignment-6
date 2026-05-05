@@ -8,6 +8,9 @@ import Products from './components/products/Products'
 import Cart from './components/cart/Cart'
 import Description from './components/products/description/Description'
 import { ToastContainer } from 'react-toastify'
+import StepCard from './components/stepcards/StepCard'
+import Pricing from './components/pricing/Pricing'
+import Footer from './components/footer/Footer'
 
 
 const fetchProducts = async () => {
@@ -73,7 +76,11 @@ function App() {
         {activeTab === "product" ? <Products productsPromise={productsPromise} carts={carts} setCarts={setCarts} ></Products> : null}
       </Suspense>
      {activeTab === "cart" ? <Cart carts = {carts} setCarts = {setCarts} ></Cart> : null}
-      
+
+     <StepCard></StepCard>
+
+     <Pricing></Pricing>
+      <Footer></Footer>
     </>
   )
 }

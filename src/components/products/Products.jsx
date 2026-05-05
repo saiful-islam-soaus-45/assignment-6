@@ -18,7 +18,7 @@ const Products = ({ productsPromise, carts, setCarts}) => {
 
             
 
-            <div className="grid grid-cols-1 ml-5  md:grid-cols-2 md:ml-3 lg:grid-cols-3  space-y-9 space-x-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 md:px-3">
                 {
                     products.map((product) => (
                         <ProductCard key={product.id} product = {product} carts ={carts} setCarts = {setCarts} ></ProductCard>
