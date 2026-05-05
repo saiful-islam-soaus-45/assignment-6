@@ -2,7 +2,8 @@
 
 import { MdOutlineShoppingCart } from "react-icons/md";
 
-const Navbar = () => {
+
+const Navbar = ({carts}) => {
     return (
         <>
             <div className="container mx-auto mt-2 sticky top-0 z-50 bg-white shadow-md">
@@ -20,7 +21,17 @@ const Navbar = () => {
                     </ul>
 
                     <div className="flex gap-4 items-center">
-                        <p className="flex items-center gap-3"><MdOutlineShoppingCart /><span className="cursor-pointer">Loggin</span></p>
+                        <p className="flex items-center gap-3">
+                            <div className="relative cursor-pointer">
+    <MdOutlineShoppingCart size={28} />
+
+    {carts.length > 0 && (
+        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+            {carts.length}
+        </span>
+    )}
+</div>
+                            <span className="cursor-pointer">Loggin</span></p>
                         <div className="">
                             <button className="btn text-white bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl">Get Started</button>
                         </div>

@@ -1,3 +1,4 @@
+
 import { Suspense, useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
@@ -6,6 +7,8 @@ import State from './components/state/State'
 import Products from './components/products/Products'
 import Cart from './components/cart/Cart'
 import Description from './components/products/description/Description'
+import { ToastContainer } from 'react-toastify'
+
 
 const fetchProducts = async () => {
   const res = await fetch("/data.json");
@@ -21,8 +24,9 @@ function App() {
   
   return (
     <>
+     <ToastContainer></ToastContainer>
       <Suspense>
-        <Navbar></Navbar>
+        <Navbar carts = {carts}></Navbar>
       </Suspense>
       <Suspense>
         <Banner></Banner>
@@ -35,16 +39,40 @@ function App() {
       <Description></Description>
       
 <div className="tabs tabs-box justify-center">
-  <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Products" defaultChecked onClick={() =>setActiveTab("product")}/>
-  <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Cart" onClick={() =>setActiveTab("cart")} />
-  
+
+  <input
+    type="radio"
+    name="my_tabs_1"
+    className={`tab rounded-full w-40 ${
+      activeTab === "product"
+        ? "bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600 text-white"
+        : ""
+    }`}
+    aria-label="Products"
+    checked={activeTab === "product"}
+    onChange={() => setActiveTab("product")}
+  />
+
+  <input
+    type="radio"
+    name="my_tabs_1"
+    className={`tab rounded-full w-40 ${
+      activeTab === "cart"
+        ? "bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600 text-white"
+        : ""
+    }`}
+    aria-label={`Cart (${carts.length})`}
+    checked={activeTab === "cart"}
+    onChange={() => setActiveTab("cart")}
+  />
+
 </div>
 
       <Suspense fallback={<span className="loading loading-spinner text-primary"></span>
       }>
         {activeTab === "product" ? <Products productsPromise={productsPromise} carts={carts} setCarts={setCarts} ></Products> : null}
       </Suspense>
-     {activeTab === "cart" ? <Cart carts = {carts} ></Cart> : null}
+     {activeTab === "cart" ? <Cart carts = {carts} setCarts = {setCarts} ></Cart> : null}
       
     </>
   )
